@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<cafemenu>
+<Donutsmenu>
   <section name="Donuts">
     <entree vegetarian="true"  >
       <item>Red velvet</item>
@@ -72,4 +72,4 @@
   </section>
 
  
-</cafemenu>
+</Donutsmenu>
