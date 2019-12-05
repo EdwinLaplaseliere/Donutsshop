@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <cafemenu>
   <section name="Donuts">
-    <entree Balls>
+    <entree vegetarian="true"  >
       <item>Red velvet</item>
       <price>3.00</price>
 	  <item>Ferrero Rocher</item>
@@ -15,7 +15,7 @@
 	  <item>Apple Crumble</item>
       <price>3.00</price>
     </entree>
-    <entree Rings>
+    <entree vegetarian="false">
       <item>Classic Glazed</item>
       <price>2.00</price>
 	  <item>Coffee Slice</item>
@@ -31,7 +31,7 @@
     </entree>
   </section>
   <section name="Hot Drinks">
-    <entree Coffees>
+    <entree vegetarian="true">
 	  <item>Espresso</item>
       <price>1.5</price>
 	  <item>Double Espresso</item>
