@@ -56,8 +56,11 @@ function getParentTag(oNode, sParentType) {
     var checkitemnamee=document.getElementById("itemname").value;
     var checkprice=document.getElementById("itemprice").value;
 
-            if (tocheck== "") {
+            if (checkitemnamee== "") {
                 alert("A name should be included");
+            }else if(checkprice ==""){
+                alert("Please enter a price");
+
             } else if (/^[A-Za-z ]+$/.test(checkitemnamee) ){
  
     if(validate_float()){
@@ -65,7 +68,8 @@ function getParentTag(oNode, sParentType) {
 
       }else {return false;}
 
-            }else{
+            }
+            else{
             alert("Only text input allowed as item name");
             return false;
             }
