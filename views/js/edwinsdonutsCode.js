@@ -49,3 +49,20 @@ function getParentTag(oNode, sParentType) {
     };
     return oParent;
 };
+
+  function validate() {
+
+    var tocheck=document.getElementById("itemname").value;
+
+            if (tocheck== "") {
+                alert("A name should be included");
+            } else{
+ 
+return /^[A-Za-z ]+$/.test(tocheck);
+
+            }
+
+        }
+
+
+

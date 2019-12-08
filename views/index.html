@@ -59,13 +59,13 @@
 						</select>
 					</div>
 					<div class="form-group">
-						<input class="form-control" type="text" name="item" placeholder="Item">
+						<input class="form-control" type="text" name="item" placeholder="Item" id="itemname">
 					</div>
 					<div class="form-group">
 						<input class="form-control" type="text" name="price" placeholder="Price">
 					</div>
-					<button type="submit" class="btn btn-primary btn-block">Submit</button>
-					<button type="Edit" class="btn btn-primary btn-block">Edit</button>
+					<button type="submit" class="btn btn-primary btn-block" onclick="validate()">Submit</button>
+					<button id="edit" class="btn btn-primary btn-block">Edit</button>
 				</form>
                     <button id="delete" class="btn btn-block btn-danger">Delete</button>
                     <p class="text-muted">To delete an entree, click the required row first</p>
