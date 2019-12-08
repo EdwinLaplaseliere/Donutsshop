@@ -83,7 +83,6 @@ function getParentTag(oNode, sParentType) {
         }
 
 
-
 // a function to validate the float numbers for the prices
 function validate_float(checkprice){
 
@@ -94,7 +93,6 @@ return true;
 }else{
     return false;
 }
-
 
 }
 
