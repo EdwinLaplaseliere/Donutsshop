@@ -102,55 +102,6 @@ router.post('/post/delete', function(req, res) {
 });
 
 
-
-
-
-
- function validate() {
-
-    var checkitemnamee=document.getElementById("itemname").value;
-    var checkprice=document.getElementById("itemprice").value;
-
-            if (tocheck== "") {
-                alert("A name should be included");
-            } else if (/^[A-Za-z ]+$/.test(checkitemnamee) ){
- 
-    if(validate_float()){
-    return true;
-
-      }else {return false;}
-
-            }else{
-            alert("Only text input allowed as item name");
-            return false;
-            }
-
-
-
-
-        }
-
-
-function validate_float(checkprice){
-
-if(/^[+-]?\d+(\.\d+)?$/.test(checkprice)){
-
-return true;
-
-}else{
-    return false;
-}
-
-
-}
-
-
-
-
-
-
-
-
 //This is where we as the server to be listening to user with a specified IP and Port
 server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function() {
   var addr = server.address();

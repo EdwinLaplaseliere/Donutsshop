@@ -50,7 +50,8 @@ function getParentTag(oNode, sParentType) {
     return oParent;
 };
 
-  function validate() {
+ 
+ function validate() {
 
     var checkitemnamee=document.getElementById("itemname").value;
     var checkprice=document.getElementById("itemprice").value;
