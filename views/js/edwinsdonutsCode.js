@@ -52,18 +52,41 @@ function getParentTag(oNode, sParentType) {
 
   function validate() {
 
-    var tocheck=document.getElementById("itemname").value;
+    var checkitemnamee=document.getElementById("itemname").value;
+    var checkprice=document.getElementById("itemprice").value;
 
             if (tocheck== "") {
                 alert("A name should be included");
-            } else if (/^[A-Za-z ]+$/.test(tocheck)){
+            } else if (/^[A-Za-z ]+$/.test(checkitemnamee) ){
  
+    if(validate_float()){
+    return true;
+
+      }else {return false;}
 
             }else{
             alert("Only text input allowed as item name");
+            return false;
             }
 
+
+
+
         }
+
+
+function validate_float(checkprice){
+
+if(/^[+-]?\d+(\.\d+)?$/.test(checkprice)){
+
+return true;
+
+}else{
+    return false;
+}
+
+
+}
 
 
 
