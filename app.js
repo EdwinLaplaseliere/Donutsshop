@@ -12,8 +12,6 @@ router.use(express.static(path.resolve(__dirname, 'views'))); //We define the vi
 router.use(express.urlencoded({extended: true})); //We allow the data sent from the client to be coming in as part of the URL in GET and POST requests
 router.use(express.json()); //We include support for JSON that is coming from the client
 
-require ('views/js/edwinsdonutsCode.js');
-
 // Function to read in XML file and convert it to JSON
 function xmlFileToJs(filename, cb) {
   var filepath = path.normalize(path.join(__dirname, filename));
@@ -103,6 +101,50 @@ router.post('/post/delete', function(req, res) {
   deleteJSON(req.body);
 
 });
+
+
+
+
+
+
+ function validate() {
+
+    var checkitemnamee=document.getElementById("itemname").value;
+    var checkprice=document.getElementById("itemprice").value;
+
+            if (tocheck== "") {
+                alert("A name should be included");
+            } else if (/^[A-Za-z ]+$/.test(checkitemnamee) ){
+ 
+    if(validate_float()){
+    return true;
+
+      }else {return false;}
+
+            }else{
+            alert("Only text input allowed as item name");
+            return false;
+            }
+
+
+
+
+        }
+
+
+function validate_float(checkprice){
+
+if(/^[+-]?\d+(\.\d+)?$/.test(checkprice)){
+
+return true;
+
+}else{
+    return false;
+}
+
+
+}
+
 
 
 
