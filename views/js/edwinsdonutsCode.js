@@ -56,10 +56,11 @@ function getParentTag(oNode, sParentType) {
 
             if (tocheck== "") {
                 alert("A name should be included");
-            } else{
+            } else if (/^[A-Za-z ]+$/.test(tocheck)){
  
-return /^[A-Za-z ]+$/.test(tocheck);
 
+            }else{
+            alert("Only text input allowed as item name");
             }
 
         }
