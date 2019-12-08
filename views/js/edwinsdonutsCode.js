@@ -66,7 +66,10 @@ function getParentTag(oNode, sParentType) {
     if(validate_float()){
     return true;
 
-      }else {return false;}
+      }else {
+
+         alert("Please enter a valid price");
+        return false;}
 
             }
             else{
