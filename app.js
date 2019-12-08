@@ -27,6 +27,7 @@ function jsToXmlFile(filename, obj, cb) {
   var filepath = path.normalize(path.join(__dirname, filename));
   var builder = new xml2js.Builder();
   var xml = builder.buildObject(obj);
+  fs.unlinkSync(filepath);
   fs.writeFile(filepath, xml, cb);
 }
 //We define the root of our website and render index.html located inside the views folder
@@ -40,8 +41,8 @@ router.get('/get/html', function(req, res) {
 
     res.writeHead(200, {'Content-Type': 'text/html'}); //We are responding to the client that the content served back is HTML and the it exists (code 200)
 
-    var xml = fs.readFileSync('donuts.xml', 'utf8'); //We are reading in the XML file
-    var xsl = fs.readFileSync('donuts.xsl', 'utf8'); //We are reading in the XSL file
+    var xml = fs.readFileSync('edwinsdonuts.xml', 'utf8'); //We are reading in the XML file
+    var xsl = fs.readFileSync('edwinsdonuts.xsl', 'utf8'); //We are reading in the XSL file
     var doc = xmlParse(xml); //Parsing our XML file
     var stylesheet = xmlParse(xsl); //Parsing our XSL file
 
@@ -58,12 +59,12 @@ router.post('/post/json', function(req, res) {
   // Function to read in a JSON file, add to it & convert to XML
   function appendJSON(obj) {
     // Function to read in XML file, convert it to JSON, add a new object and write back to XML file
-    xmlFileToJs('donuts.xml', function(err, result) {
+    xmlFileToJs('edwinsdonuts.xml', function(err, result) {
       if (err) throw (err);
       //This is where you pass on information from the form inside index.html in a form of JSON and navigate through our JSON (XML) file to create a new entree object
-      result.cafemenu.section[obj.sec_n].entree.push({'item': obj.item, 'price': obj.price}); //If your XML elements are differet, this is where you have to change to your own element names
+      result.edwinsdonutsmenu.section[obj.sec_n].entree.push({'item': obj.item, 'price': obj.price}); //If your XML elements are differet, this is where you have to change to your own element names
       //Converting back to our original XML file from JSON
-      jsToXmlFile('PaddysCafe.xml', result, function(err) {
+      jsToXmlFile('edwinsdonuts.xml', result, function(err) {
         if (err) console.log(err);
       })
     })
@@ -83,12 +84,12 @@ router.post('/post/delete', function(req, res) {
   // Function to read in a JSON file, add to it & convert to XML
   function deleteJSON(obj) {
     // Function to read in XML file, convert it to JSON, delete the required object and write back to XML file
-    xmlFileToJs('donuts.xml', function(err, result) {
+    xmlFileToJs('edwinsdonuts.xml', function(err, result) {
       if (err) throw (err);
       //This is where we delete the object based on the position of the section and position of the entree, as being passed on from index.html
-      delete result.cafemenu.section[obj.section].entree[obj.entree];
+      delete result.edwinsdonutsmenu.section[obj.section].entree[obj.entree];
       //This is where we convert from JSON and write back our XML file
-      jsToXmlFile('donuts.xml', result, function(err) {
+      jsToXmlFile('edwinsdonuts.xml', result, function(err) {
         if (err) console.log(err);
       })
     })

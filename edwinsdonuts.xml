@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<edwinsdonutsmenu>
+  <section name="Donuts">
+    <entree vegetarian="False">
+      <item>Red velvet</item>
+      <price>3.00</price>
+    </entree>
+    <entree>
+      <item>Banofee</item>
+      <price>3.00</price>
+    </entree>
+     <entree>
+      <item>Cookies and cream</item>
+      <price>3.00</price>
+    </entree>
+     <entree>
+      <item>Caramel crumble</item>
+      <price>3.00</price>
+    </entree>
+     <entree>
+      <item>Peanut butter</item>
+      <price>3.00</price>
+    </entree>
+     <entree>
+      <item>Lemon Merengue</item>
+      <price>3.00</price>
+    </entree>
+     <entree>
+      <item>Ferrero Rocher</item>
+      <price>3.00</price>
+    </entree>
+  </section>
+  <section name="Coffees">
+    <entree>
+      <item>Capuccino</item>
+      <price>2.50</price>
+    </entree>
+    <entree>
+      <item>Latte</item>
+      <price>2.50</price>
+    </entree>
+     <entree>
+      <item>Flat white</item>
+      <price>2.50</price>
+    </entree>
+    <entree>
+      <item>Machiatto</item>
+      <price>2.50</price>
+    </entree>
+     <entree>
+      <item>Double expreso</item>
+      <price>2.00</price>
+    </entree>
+    <entree>
+      <item>Expreso</item>
+      <price>1.50</price>
+    </entree>
+   
+  </section>
+  <section name="Hot chocolates">
+    <entree>
+      <item>Regular Hot chocolatte</item>
+      <price>3.00</price>
+    </entree>
+    <entree>
+      <item>Cookies and cream hot chocolate</item>
+      <price>3.50</price>
+    </entree>
+    <entree vegetarian="true">
+      <item>Ferrero Rocher Hot chocolatte</item>
+      <price>3.50</price>
+    </entree>
+    <entree vegetarian="true">
+      <item>Chocolatte orange Hot chocolatte</item>
+      <price>3.50</price>
+    </entree>
+  </section>
+  <section name="Combos">
+    <entree>
+      <item>Any donut and a coffee or Reguar hot chocolatte</item>
+      <price>4.50</price>
+    </entree>
+    <entree>
+      <item>Any donut and a Deluxed Hot chocolatte</item>
+      <price>5.00</price>
+    </entree>
+  </section>
+</edwinsdonutsmenu>

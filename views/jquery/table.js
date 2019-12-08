@@ -1,4 +1,4 @@
- function draw_table()
+function draw_table()
 {
 	$("#results").empty();
 	$.getJSONuncached = function (url)
